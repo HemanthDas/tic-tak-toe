@@ -1,0 +1,89 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#grid {
+  width: 90vmin;
+  height: 90vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  outline: rgb(0, 0, 0) solid 1px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  > * {
+    width: 100%;
+    height: 100%;
+  }
+}
+.box .cross,
+.box .circle {
+  cursor: not-allowed;
+}
+.cross {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.cross:before,
+.cross:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 46%,
+    rgba(80, 80, 144, 1) 47%,
+    rgba(0, 1, 16, 1) 58%
+  );
+}
+
+.cross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.cross:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+.circle {
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 46%,
+    rgba(80, 80, 144, 1) 47%,
+    rgba(0, 1, 16, 1) 58%
+  );
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
