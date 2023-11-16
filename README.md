@@ -33,4 +33,4 @@ This project is a classic Tic-Tac-Toe game where two players take turns to mark 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe.git
+git clone https://github.com/HemanthDas/tic-tac-toe.git
